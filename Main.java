@@ -13,6 +13,7 @@ public class Main{
     }
     
     public static int reset(int inp, char tkn){
+        if (full()) return 0;
         if (tkn != 'O'){
             int count = 0;
             for (int i = 0; i<tkns[0].length; i++){
@@ -30,7 +31,7 @@ public class Main{
                     }
                 }
             }
-            return 0;
+            return 1;
         }else{
             int ranPos = (int) (Math.random()*9);
             int count = 0;
@@ -41,6 +42,7 @@ public class Main{
                             tkns[i][j] = 'O';
                             return 1;
                         }
+                        if (count == ranPos && tkns[i][j] != ' ') return 8; // 8 : Not Possible
                         count ++;
                     }
                 }
@@ -50,8 +52,7 @@ public class Main{
     }
     
     public static void updArena(char tkn){
-        if (tkn != 'X') System.out.println("You: ");
-        else System.out.println("Computer: ");
+        if (tkn == 'O') System.out.println("Computer: ");
         for (int i = 0; i<tkns[0].length; i++){
             for (int j = 0; j<tkns[0].length; j++){
                 System.out.print(" " + tkns[i][j] + " ");
@@ -105,17 +106,22 @@ public class Main{
     
     public static void main(){
         wipe();
-        int inp; int count = 0; char tkn='X'; int st = 1; int i = 0;
+        int playerChoice; char tkn='X'; int st = 1; int i = 0;
         while (!full()){
+            st =0;
             tkn = ((i%2) == 0)?'X':'O';
-            updArena(tkn);
             score();
             if (tkn == 'X'){
-                inp = in.nextInt();
-                st = reset(inp, tkn);
+                System.out.print("Player X: " );
+                playerChoice = in.nextInt();
+                st = reset(playerChoice, tkn);
             }else{
                 st = reset(0, tkn);
+                while (st != 1){
+                    st = reset(0, tkn);
+                }
             }
+            updArena(tkn);
             
            if (st == 1) i++;
         }
