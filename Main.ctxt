@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Main
+comment1.params=
+comment1.target=void\ wipe()
+comment2.params=inp\ tkn
+comment2.target=int\ reset(int,\ char)
+comment3.params=tkn
+comment3.target=void\ updArena(char)
+comment4.params=
+comment4.target=boolean\ full()
+comment5.params=
+comment5.target=void\ score()
+comment6.params=
+comment6.target=void\ main()
+numComments=7
