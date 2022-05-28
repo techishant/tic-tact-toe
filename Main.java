@@ -9,6 +9,19 @@ public class Main{
                 tkns[i][j] = ' ';
             }
         }
+        System.out.println("Tic-Tac-Toe\n-made by Ishant");
+        int count = 1;
+        for (int i = 0; i<tkns[0].length; i++){
+            for (int j = 0; j<tkns[1].length; j++){
+                System.out.print(" " + count + " ");
+                if (j != 2) System.out.print("|");
+                count++;
+            }
+            if (i != 2) System.out.println("\n---+---+---");
+            else System.out.print("\n");
+        }
+        System.out.println("===========\n\n");
+        
         return;
     }
     
@@ -42,7 +55,7 @@ public class Main{
                             tkns[i][j] = 'O';
                             return 1;
                         }
-                        if (count == ranPos && tkns[i][j] != ' ') return 8; // 8 : Not Possible
+                        if (count == ranPos && tkns[i][j] != ' ') return 0;
                         count ++;
                     }
                 }
@@ -61,13 +74,14 @@ public class Main{
             if (i != 2) System.out.println("\n---+---+---");
             else System.out.print("\n");
         }
+        System.out.println("###########\n");
         return;
     }
     
     public static boolean full(){
         int count = 0;
         for (int i = 0; i<tkns[0].length; i++){
-            for (int j = 0; j<tkns[0].length; j++){
+            for (int j = 0; j<tkns[1].length; j++){
                 if (tkns[i][j] == ' '){
                     return false;
                 }else{
@@ -93,13 +107,13 @@ public class Main{
         RIGHT = tkns[0][2] + tkns[1][2] + tkns[2][2];
         
         if (NS == 264 || WE == 264 || NW == 264 || NE == 264 || TOP == 264 || BOTTOM == 264 || LEFT == 264 || RIGHT == 264){
-            System.out.println("You Win");
+            System.out.println("\n\n==================\n| You Win !!! :) |\n==================");
             System.exit(0);
         }else if(NS == 237 || WE == 237 || NW == 237 || NE == 237 || TOP == 237 || BOTTOM == 237 || LEFT == 237 || RIGHT == 237) {
-            System.out.println("You Lose");
+            System.out.println("\n\n=================\n| You Lose ! :( |\n=================");
             System.exit(0);
         }else if (full()){
-            System.out.println("Draw");
+            System.out.println("\n\n===========\n| Draw :| |\n===========");
             System.exit(0);
         }
     }
@@ -125,7 +139,6 @@ public class Main{
             
            if (st == 1) i++;
         }
-        updArena(tkn);
         score();
         System.out.println("Game Over");
     } 
