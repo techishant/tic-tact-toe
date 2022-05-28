@@ -1,12 +1,11 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
+This is a console based Tic-Tac-Toe game using fundamental Java conccept
+s made in Bluej(School Based programming).
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: Tic-Tac-Toe
+PURPOSE OF PROJECT: Game
+VERSION or DATE: 28/5/2022
+HOW TO START THIS PROJECT: Main.java (Main.class)
+AUTHORS: @Ishant_sh (github/techishant)
+USER INSTRUCTIONS: Self Explanatory
