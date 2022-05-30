@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=compMove
+comment1.params=arr\ n
+comment1.target=boolean\ avl(java.util.ArrayList,\ int)
+comment2.params=
+comment2.target=int\ checkCompProf()
+comment3.params=
+comment3.target=int\ checkCompLoss()
+comment4.params=n
+comment4.target=java.util.ArrayList\ neighbors(int)
+comment5.params=neighbors
+comment5.target=int\ compMove(java.util.ArrayList)
+comment6.params=
+comment6.target=void\ main()
+numComments=7
